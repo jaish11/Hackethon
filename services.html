@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn.pixabay.com/photo/2016/11/08/05/54/agriculture-1807581__340.jpg">
+
+    <title>Services</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+            background-size: cover;
+            font-family: sans-serif;
+        }
+
+        nav {
+            width: 100%;
+            height: 100px;
+            /* background-color: white; */
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            letter-spacing: 2px;
+            /* padding: 10px; */
+        }
+
+        .logo h6 {
+            font-size: large;
+        }
+
+        #logo {
+            margin: 10px 34px;
+        }
+
+        #logo img {
+            height: 80px;
+            padding-top: 20px;
+
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 15px;
+            position: relative;
+        }
+
+        .navbar a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            border-bottom: 2px solid indianred;
+            transition: 0.4s linear;
+        }
+
+        .navbar a:hover:before {
+            width: 90%;
+        }
+
+        .register a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            background: indianred;
+            border-radius: 8px;
+            transition: 0.4s;
+        }
+
+        .register a:hover {
+            background: transparent;
+            border: 1px solid indianred;
+
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            margin-top: 50px;
+        }
+
+        label {
+            display: block;
+            text-align: center;
+            font-size: 30px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 50%;
+            margin-left: 25%;
+            padding: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            font-size: 20px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 15px;
+            height: 35px;
+            width: 70px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            /* font-size: 15px; */
+        }
+
+        button:hover {
+            background-color: #aaf2ad;
+        }
+
+        #result {
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <div class="logo">
+                <div id="logo">
+                    <img src="logo.jpeg" alt="Agriculture">
+                </div>
+                <h6>Croptech Agriculture</h6>
+            </div>
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <a href="Weather.html">Weather</a>
+                <a href="seed.html">seed</a>
+                <!-- <a href="#">Work</a> -->
+                <a href="Furtilization.html">Fertilization</a>
+            </div>
+            <div class="register">
+                <a href="#">Register</a>
+            </div>
+        </nav>
+            <h1>Location Finder</h1>
+            <label for="location">Enter your location:</label>
+            <input type="text" id="location" name="location">
+            <button type="button" onclick="findLocation()">Find</button>
+        
+            <div id="result">
+                <p>State: <span id="state"></span></p>
+                <p>District: <span id="district"></span></p>
+                <p>Village: <span id="village"></span></p>
+            </div>
+    </header>
+
+    <script>
+//         function findLocation() {
+//   // Get the user's input
+//   var location = document.getElementById("location").value;
+
+//   // Call the API to get the location details
+//   var xhr = new XMLHttpRequest();
+//   xhr.open("GET", "https://api.opencagedata.com/geocode/v1/json?q=" + location + "&key=YOUR_API_KEY", true);
+//   xhr.onreadystatechange = function() {
+//     if (xhr.readyState == 4 && xhr.status == 200) {
+//       var result = JSON.parse(xhr.responseText);
+
+//       // Extract the state, district, and village from the API response
+//       var state = "";
+//       var district = "";
+//       var village = "";
+//       var components = result.results[0].components;
+//       if (components.state) {
+//         state = components.state;
+//       }
+//       if (components.county) {
+//         district = components.county;
+//       }
+//       if (components.village) {
+//         village = components.village;
+//       }
+
+//       // Display the location details
+//       var resultDiv = document.getElementById("result");
+//       var stateSpan = document.getElementById("state");
+//       var districtSpan = document.getElementById("district");
+//       var villageSpan = document.getElementById("village");
+//       stateSpan.innerHTML = state;
+//       districtSpan.innerHTML = district;
+//       villageSpan.innerHTML = village;
+//       resultDiv.style.display = "block";
+//     }
+//   };
+//   xhr.send();
+// }
+    </script>
+</body>
+
+</html>

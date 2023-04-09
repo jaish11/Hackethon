@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn.pixabay.com/photo/2016/11/08/05/54/agriculture-1807581__340.jpg">
+    <title>About Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            margin: 20px 0px;
+        }
+
+        .navbar ul li {
+            font-family: century;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 25px;
+            transition: all .5s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 10px white;
+        }
+
+        #portfolio {
+            margin-top: 3%;
+            display: flex;
+            flex-direction: row;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            align-items: center;
+            padding: 20px;
+            height: 100%;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            display: flex;
+            flex-wrap: wrap;
+            width: 320px;
+            height: 400px;
+            margin: 10%;
+            padding: 5px 25px 25px 15px;
+        }
+        h3{
+            font-size: 30px;
+        }
+
+        .headings {
+            font-family: century;
+            font-size: 3rem;
+            text-align: center;
+            margin: 40px 0px;
+        }
+
+        footer {
+            margin-top: 17%;
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 9px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="Others.html">Other</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+    <h1 class="headings">Contact us</h1>
+    <section id="portfolio">
+
+        <div class="gallery">
+            <img src="ja.jpeg" alt="">
+            <a href="https://www.linkedin.com/in/jaish-ansari/" target="_blank">
+                <h3>Jaish Ansari</h3>
+            </a>
+        </div>
+        <div class="gallery">
+            <img src="sh.jpg" alt="">
+            <a href="https://www.linkedin.com/in/shaif-ansari-0a177b232/" target="_blank">
+                <h3>Shaif Ansari</h3>
+            </a>
+        </div>
+        <div class="gallery">
+            <img src="aj.jpeg" alt="">
+            <a href="https://www.linkedin.com/in/ajmat-kathat-0a5b45252/" target="_blank"> 
+                <h3>Ajmat Kathat</h3>
+            </a>
+        </div>
+        <div class="gallery">
+            <img src="pj.jpeg" alt="">
+            <a href="https://www.linkedin.com/in/pooja-rawat-5953b7270/" target="_blank">
+                <h3>Pooja Rawat</h3>
+            </a>
+        </div>
+
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.CroptechAgriculture.com. All rights reserved!
+        </div>
+    </footer>
+</body>
+
+</html>
